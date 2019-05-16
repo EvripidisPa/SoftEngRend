@@ -186,17 +186,5 @@ public:
 
 int main()
 {
-	float m;
-	cout << "Insert number. (0 to exit): " << endl;
-	cin >> m;
-
-	while (m!=0.0)
-	{
-		m = (1.45405 - m) / 0.116;
-		cout << "Result: " << m << endl;
-		cout << "Insert number. (0 to exit): " << endl;
-		cin >> m;
-	}
-
 	return 0;
 }
