@@ -1,0 +1,11 @@
+# How to implement time # 
+
+Links to some time implementations in cpp.
+
+1. https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm       STRUCT_TM
+2. https://en.cppreference.com/w/cpp/chrono                         Date and time utilities
+3. https://en.cppreference.com/w/cpp/header/chrono                  Standard library header <chrono>
+4. http://www.cplusplus.com/reference/chrono/                       <chrono>
+5. https://en.cppreference.com/w/cpp/chrono/c/time                  std::time in <ctime>
+6. https://en.cppreference.com/w/c/chrono/tm                        tm in time.h
+7. https://www.boost.org/doc/libs/1_39_0/doc/html/date_time.html    Chapter5.Boost.Date_Time
