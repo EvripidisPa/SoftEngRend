@@ -1,6 +1,6 @@
 # SoftEngRend
 App Idea and Basic Implementation for Software Engineering Course
 
-Currently on Programming Stage.
+###Currently on Programming Stage.
 
-Due Date 19/5/19
+##Due Date 19/5/19
