@@ -3,7 +3,6 @@
 #include "Store.h"
 #include "DateTime.h"
 #include <string>
-
 class Events
 {
 	enum Status

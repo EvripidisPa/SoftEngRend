@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Reservation.h"
+#include "our_structs.h"
 
 
 Reservation::Reservation(DateTime datetime, int numOfPeople, int numOfPark, Store store, User users)

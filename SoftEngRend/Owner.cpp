@@ -1,26 +1,30 @@
-#include "stdafx.h"
+#include <iostream>
 #include "Owner.h"
+#include <string>
+#include "Store.h"
+#include "stdafx.h"
 
+using namespace std;
 
-Owner::Owner(string username, string password)
+Owner::Owner(int ownID, const Store& Store, const string& Pass, const string& name, const string& report)
 {
-	/*this->ID = ID;							1 counter for all ? like we should with users*/
-	this->password = password;
-	this->username = username;
+	ID = ownID;
+	katStore = Store;
+	setPassword(Pass);
+	username = name;
+	usReport = report;
 }
-
-
 Owner::~Owner()
 {
+	cout << "Owner gone...\n";
 }
 
-string Owner::getPassword()
+void Owner::setPassword(const string& Pass)
 {
-	return string(password);
+	password = Pass;
 }
 
-void Owner::setPassword(string pass)
+string Owner::getPassword() const
 {
-	this->password = pass;
+	return password;
 }
-

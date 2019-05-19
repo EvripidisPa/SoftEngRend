@@ -1,6 +1,6 @@
 #pragma once
 
-struct DateTimeStruct
+struct DateTime
 {
 	int sec;   // seconds of minutes from 0 to 61
 	int min;   // minutes of hour from 0 to 59
@@ -14,6 +14,6 @@ struct Availability
 {
 	int numPeople;
 	int numParking;
-	struct DateTimeStruct;
+	struct DateTime;
 
 };

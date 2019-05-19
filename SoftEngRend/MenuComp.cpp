@@ -2,6 +2,7 @@
 #include <string>
 #include<vector>
 #include "MenuComp.h"
+#include "stdafx.h"
 using namespace std;
 using std::string;
 

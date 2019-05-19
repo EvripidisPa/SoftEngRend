@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include "stdafx.h"
 #include "Events.h"
 
 Events::Events(const string& katInfo, const string& katTitle, DateTime& DT, Status St, Store& Sto)
@@ -16,7 +16,7 @@ Events::~Events()
 	std::cout << "events gone...\n";
 }
 
-void Events::setInfo(const string& katInfo) const
+void Events::setInfo(const string&) const
 {
 	Info = katInfo;
 }
