@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include "Store.h"
-
+#include "Owner.h"
+#include "stdafx.h"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ Store::Store(int I_D, string Name, double Latitude, double Longitude, Owner* OWN
 	name = Name;
 	latitude = Latitude;
 	longitude = Longitude;
-	if (OWN != nullptr)
+	if (owner != nullptr)
 	{
 		owner = OWN;
 	}
@@ -31,22 +32,22 @@ double Store::getLat() const { return latitude; }
 double Store::getLong() const { return longitude; }
 int Store::getCapacity() const { return capacity; }
 int Store::getCapacity_Park() const { return capacity_park; }
-float Store::getRating() const { return rating; }
+float Store; :getRating() const { return rating; }
 
 
-void Store::setBio(string bio) {};
-void Store::setName(string name) {};
-void Store::setLat(double latitude) {};
-void Store::setLongitude(double longitude) {};
-void Store::setCapacity(int capacity) {};
-void Store::setCapacity_Park(int capacity_park) {};
-void Store::setRating(float rating) {};
+void Store::setBio(string b) { b = bio; }
+//void Store::getName(string n) { n=name; }
+void Store::setLat(double lat) { lat = latitude; }
+void Store::setLongitude(double long) { long = longitude; }
+void Store::setCapacity(int cap) { cap = capacity; }
+void Store::setCapacity_Park(int cap_park) { cap_park = capacity_park; }
+void Store::setRating(float ra) { ra = rating; }
 
 void Store::updateEvent(const Events& katEvent)
 {
 	Event.push_back(katEvent);
 	for (int i = 0; i < Event.size(); i++)
-		cout << Event[i] << '\n';
+		cout << Event[i].getEvents << '\n';
 }
 const Events Store::getEvents(int e) const
 {
@@ -109,7 +110,7 @@ void MenuComp::deleteMenu()
 	Menu.clear();
 }
 
-void Store::setHours(const DateTime & katHours)
+void Store::setHours(const DateTimeStruct & katHours)
 {
 	hours.push_back(katHours);
 	for (int i = 0; i < hours.size(); i++)

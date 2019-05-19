@@ -1,9 +1,8 @@
 #include <iostream>
-#include <string>
 #include "stdafx.h"
 #include "Events.h"
 
-Events::Events(const string& katInfo, const string& katTitle, DateTime& DT, Status St, Store& Sto)
+Events::Events( string& katInfo,  string& katTitle,  DateTime& DT,  Status St,  Store& Sto)
 {
 	setTitle(katTitle);
 	setInfo(katInfo);
@@ -16,55 +15,55 @@ Events::~Events()
 	std::cout << "events gone...\n";
 }
 
-void Events::setInfo(const string&) const
+void Events::setInfo( string& katInfo)
 {
 	Info = katInfo;
 }
-void Events::setTitle(const string&) const
+void Events::setTitle( string& katTitle)
 {
 	Title = katTitle;
 }
-void Events::setDate(DateTime&) const
+void Events::setDate( DateTime& DT)
 {
 	date = DT;
 }
-void Events::setStatus(Status) const
+void Events::setStatus( Status St)
 {
 	status = St;
 }
-void Events::setStore(Store&) const
+void Events::setStore( Store& Sto)
 {
 	store = Sto;
 }
 
-const string Events::getInfo()
+ string Events::getInfo() 
 {
 	return Info;
 }
 
-const string Events::getTitle()
+ string Events::getTitle() 
 {
 	return Title;
 }
 
-const DateTime Events::setDate()
+ DateTime Events::setDate() 
 {
 	return date;
 }
 
-Status Events::getStatus()
+Status Events::getStatus() 
 {
 	return status;
 }
 
-const Store Events::getStore
+ Store Events::getStore 
 {
 	return store;
 }
 
 
 
-const DateTime Events::getDate()
+ DateTime Events::getDate() 
 {
 	return date;
 }

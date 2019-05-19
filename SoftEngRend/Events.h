@@ -1,8 +1,9 @@
 #ifndef EVENTS_H
 #define EVENTS_H
 #include "Store.h"
-#include "DateTime.h"
+#include "our_structs.h"
 #include <string>
+
 class Events
 {
 	enum Status
@@ -10,26 +11,26 @@ class Events
 		OPEN, CLOSED
 	};
 public:
-	Events(const string&, const string&, DateTime&, Status, Store&);
+	Events( string&,  string&, DateTime&, Status, Store&);
 	~Events();
-	void setInfo(const string&) const;
-	void setTitle(const string&) const;
-	void setDate(DateTime&) const;
-	void setStatus(Status) const;
-	void setStore(Store&) const;
+	void setInfo( string&);
+	void setTitle( string&);
+	void setDate(DateTime&);
+	void setStatus(Status);
+	void setStore(Store&);
 
-	const string getInfo();
-	const string getTitle();
-	const DateTime getDate();
-	Status getStatus();
-	const Store getStore();
+	 string getInfo() ;
+	 string getTitle() ;
+	 DateTime getDate() ;
+	Status getStatus() ;
+	 Store getStore() ;
 
 private:
-	string Info;
-	string Title;
-	DateTime date;
-	Status status;
-	Store store;
+	 string Info;
+	 string Title;
+	 DateTime *date;
+	 Status status;
+	 Store* store;
 
 };
 

@@ -1,19 +1,15 @@
 #ifndef STORE_H
 #define STORE_H
-
 #include <string>
 #include "Owner.h"
 #include "our_structs.h"
-#include "stdafx.h"
-#include "Events.h"
-#include "Photo.h"
-
+#include <vector>
 using namespace std;
 
 class Store
 {
 public:
-	Store(int ID, string name, double latitude, double longitude, Owner* owner);
+	Store(int ID, string, double latitude, double longitude, Owner* owner);
 	Store(int ID, string name, Owner* owner);
 	string getBio() const;
 	string getName() const;
@@ -24,13 +20,13 @@ public:
 	int getCapacity_Park() const;
 	float getRating() const;
 
-	void setBio(string bio);
-	void setName(string name);
-	void setLat(double latitude);
-	void setLongitude(double longitude);
-	void setCapacity(int capacity);
-	void setCapacity_Park(int capacity_park);
-	void setRating(float rating);
+	void setBio(string&);
+	//void setName
+	void setLat(double);
+	void setLongitude(double);
+	void setCapacity(int);
+	void setCapacity_Park(int);
+	void setRating(float);
 
 	void updateEvent(const Events&);
 	const Events getEvents(int) const;
@@ -62,7 +58,20 @@ private:
 	std::vector<Menu> menu;
 	std::vector<Photos> photos;
 	std::vector<DateTime> hours;
+
+	/*struct DateTimeStruct
+	{
+		int sec;   // seconds of minutes from 0 to 61
+		int min;   // minutes of hour from 0 to 59
+		int hour;  // hours of day from 0 to 24
+		int day;   // day of month from 1 to 31
+		int mon;   // month of year from 0 to 11
+		int year;  // year since 1900
+	};*/
+
+
 };
+
 
 
 #endif // STORE_H

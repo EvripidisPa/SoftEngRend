@@ -4,7 +4,6 @@
 #include <string>
 #include "Store.h"
 #include "Report.h"
-#include "Store.h"
 #include "stdafx.h"
 #include <iostream>
 
@@ -14,14 +13,14 @@ class Owner
 {
 
 public:
-	Owner(int, const Store&, const string&, const string&, const string&);
+	Owner(int,  Store&,  string&,  string&,  string&);
 	~Owner();
-	void setPassword(const string&);
-	string getPassword() const;
+	void setPassword( string&);
+	string getPassword() ;
 
 private:
 	int ID;
-	const Store katStore;
+	Store katStore;
 	string password;
 	string username;
 	string usReport;

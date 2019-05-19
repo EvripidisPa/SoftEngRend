@@ -1,5 +1,6 @@
 #pragma once
 #include "Store.h"
+#include <iostream>
 
 class Photo
 {
@@ -8,7 +9,7 @@ private:
 	Store* store;
 
 public:
-	//----------Constructors----------
+	//----------ructors----------
 	Photo(int PhID, int position, Store store);
 
 	Photo();

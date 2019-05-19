@@ -1,27 +1,24 @@
 #ifndef MENUCOMP_H
 #define MENUCOMP_H
-
+#include <iomanip>
 #include <string>
 #include <vector>
-//using namespace std;
-using std::string;
 //#include "Menu.h"
 class MenuComp
 {
 public:
-	MenuComp(const string&, const string&, float, const string&);
+	MenuComp( string&,  string&, float,  string&);
 	~MenuComp();
-	const string getTitle() const;
-	void setTitle(const string&);
-	const string getInfo() const;
-	void setInfo(const string&);
-	float getPrice() const;
+	 string getTitle() ;
+	void setTitle( string&);
+	 string getInfo() ;
+	void setInfo( string&);
+	float getPrice() ;
 	void setPrice(float);
 
-	void newMenu(const string&);
 	void deleteMenu();
 
-public:
+private:
 	string Title;
 	string Info;
 	float price;

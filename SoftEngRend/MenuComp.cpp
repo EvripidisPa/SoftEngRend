@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
-#include<vector>
+#include <vector>
 #include "MenuComp.h"
 #include "stdafx.h"
 using namespace std;
-using std::string;
 
-MenuComp::MenuComp(const string& katTitle, const string& katInfo, float katPrice, const string& katMenu)
+MenuComp::MenuComp( string& katTitle,  string& katInfo, float katPrice,  string& katMenu)
 {
 	setTitle(katTitle);
 	setInfo(katInfo);
@@ -18,11 +17,11 @@ MenuComp::~MenuComp()
 	cout << "MenuComp gone\n";
 }
 
-void MenuComp::setTitle(const string& katTitle)
+void MenuComp::setTitle( string& katTitle)
 {
 	Title = katTitle;
 }
-void MenuComp::setInfo(const string& katInfo)
+void MenuComp::setInfo( string& katInfo)
 {
 	Info = katInfo;
 }
@@ -31,25 +30,19 @@ void MenuComp::setPrice(float katPrice)
 	price = katPrice;
 }
 
-const string MenuComp::getTitle() const
+ string MenuComp::getTitle() 
 {
 	return Title;
 }
-const string MenuComp::getInfo() const
+ string MenuComp::getInfo() 
 {
 	return Info;
 }
-float MenuComp::getPrice() const
+float MenuComp::getPrice() 
 {
 	return price;
 }
 
-void MenuComp::newMenu(const string& katMenu)
-{
-	Menu.push_back(katMenu);
-	for (int i = 0; i < Menu.size(); i++)
-		cout << Menu[i] << '\n';
-}
 void MenuComp::deleteMenu()
 {
 	Menu.clear();
