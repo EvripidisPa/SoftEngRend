@@ -2,7 +2,7 @@
 #define USER_H
 
 #include <string>
-#include "Report.h"
+//#include "Report.h"
 using namespace std;
 
 class User
@@ -17,13 +17,13 @@ private:
 	string phone;
 	float rating;
 
-	enum status
+	enum usr_status
 	{
 		free = 0,
 		premium = 1
 	};
 
-	Report reports[];
+//	Report reports[];
 
 public:
 	User();
@@ -57,7 +57,7 @@ public:
 
 	void setRating(float rating);
 
-	enum getStatus();
+	int getStatus();
 
 	void setStatus(int status);
 

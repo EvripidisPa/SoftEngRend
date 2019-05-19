@@ -71,12 +71,13 @@ void User::setRating(float rating) {
 	this->rating = rating;
 }
 
-enum User::getStatus() {
-	return this->status;
+int User::getStatus() {
+//	return usr_status;
+	return 0;
 }
 
 void User::setStatus(int status) {
-	this->status = status;
+//	this->usr_status = status;
 }
 
 void User::getPremium() {
