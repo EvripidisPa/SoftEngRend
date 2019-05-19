@@ -1,7 +1,4 @@
-#include <iostream>
 #include "Owner.h"
-#include <string>
-#include "Store.h"
 #include "stdafx.h"
 
 using namespace std;

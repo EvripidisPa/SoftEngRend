@@ -11,7 +11,7 @@ Store::Store(int I_D, string Name, double Latitude, double Longitude, Owner* OWN
 	name = Name;
 	latitude = Latitude;
 	longitude = Longitude;
-	if (Owner != nullptr)
+	if (OWN != nullptr)
 	{
 		owner = OWN;
 	}
@@ -21,7 +21,7 @@ Store::Store(int I_D, string Name, Owner* OWN)
 {
 	ID = I_D;
 	name = Name;
-	Owner = OWN;
+	owner = OWN;
 }
 
 string Store::getBio() const { return bio; }
@@ -31,16 +31,16 @@ double Store::getLat() const { return latitude; }
 double Store::getLong() const { return longitude; }
 int Store::getCapacity() const { return capacity; }
 int Store::getCapacity_Park() const { return capacity_park; }
-float Store; :getRating() const { return rating; }
+float Store::getRating() const { return rating; }
 
 
-void Store::setBio(string bio);
-void Store::getName(string name);
-void Store::setLat(double latitude);
-void Store::setLongitude(double longitude);
-void Store::setCapacity(int capacity);
-void Store::setCapacity_Park(int capacity_park);
-void Store::setRating(float rating);
+void Store::setBio(string bio) {};
+void Store::setName(string name) {};
+void Store::setLat(double latitude) {};
+void Store::setLongitude(double longitude) {};
+void Store::setCapacity(int capacity) {};
+void Store::setCapacity_Park(int capacity_park) {};
+void Store::setRating(float rating) {};
 
 void Store::updateEvent(const Events& katEvent)
 {

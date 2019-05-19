@@ -4,6 +4,9 @@
 #include <string>
 #include "Store.h"
 #include "Report.h"
+#include "Store.h"
+#include "stdafx.h"
+#include <iostream>
 
 using namespace std;
 

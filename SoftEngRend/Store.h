@@ -25,6 +25,7 @@ public:
 	float getRating() const;
 
 	void setBio(string bio);
+	void setName(string name);
 	void setLat(double latitude);
 	void setLongitude(double longitude);
 	void setCapacity(int capacity);
