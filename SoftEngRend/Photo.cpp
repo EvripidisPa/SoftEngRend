@@ -2,11 +2,11 @@
 #include "Photo.h"
 
 
-Photo::Photo(int PhID, int position, Store store)
+Photo::Photo(int phid, int pos, Store* Store)
 {
-		this->PhID = PhID;
-		this->position = position;
-		this->store = &store;
+	PhID = phid;
+	position = pos;
+	store = Store;
 }
 
 Photo::Photo()

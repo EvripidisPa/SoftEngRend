@@ -1,8 +1,8 @@
-#include <iostream>
 #include "stdafx.h"
+#include <iostream>
 #include "Events.h"
 
-Events::Events( string& katInfo,  string& katTitle,  DateTime& DT,  Status St,  Store& Sto)
+Events::Events( string& katInfo,  string& katTitle,  DateTime& DT,  Status St,  Store* Sto)
 {
 	setTitle(katTitle);
 	setInfo(katInfo);
@@ -31,41 +31,29 @@ void Events::setStatus( Status St)
 {
 	status = St;
 }
-void Events::setStore( Store& Sto)
+void Events::setStore( Store* Sto)
 {
 	store = Sto;
 }
 
- string Events::getInfo() 
+ string Events::getInfo() const
 {
 	return Info;
 }
 
- string Events::getTitle() 
+ string Events::getTitle() const
 {
 	return Title;
 }
 
- DateTime Events::setDate() 
+ DateTime Events::getDate() const
 {
 	return date;
 }
 
-Status Events::getStatus() 
+Events::Status Events::getStatus() const
 {
 	return status;
-}
-
- Store Events::getStore 
-{
-	return store;
-}
-
-
-
- DateTime Events::getDate() 
-{
-	return date;
 }
 
 

@@ -3,20 +3,19 @@
 #include <iomanip>
 #include <string>
 #include <vector>
+using std::string;
 //#include "Menu.h"
 class MenuComp
 {
 public:
 	MenuComp( string&,  string&, float,  string&);
 	~MenuComp();
-	 string getTitle() ;
+	string getTitle() ;
 	void setTitle( string&);
-	 string getInfo() ;
+	string getInfo() ;
 	void setInfo( string&);
 	float getPrice() ;
 	void setPrice(float);
-
-	void deleteMenu();
 
 private:
 	string Title;

@@ -1,8 +1,9 @@
 #ifndef EVENTS_H
 #define EVENTS_H
-#include "Store.h"
 #include "our_structs.h"
 #include <string>
+using std::string;
+class Store;
 
 class Events
 {
@@ -11,24 +12,23 @@ class Events
 		OPEN, CLOSED
 	};
 public:
-	Events( string&,  string&, DateTime&, Status, Store&);
+	Events( string&,  string&, DateTime&, Status, Store*);
 	~Events();
 	void setInfo( string&);
 	void setTitle( string&);
 	void setDate(DateTime&);
 	void setStatus(Status);
-	void setStore(Store&);
+	void setStore(Store*);
 
-	 string getInfo() ;
-	 string getTitle() ;
-	 DateTime getDate() ;
-	Status getStatus() ;
-	 Store getStore() ;
+	string getInfo() const;
+	string getTitle() const;
+	DateTime getDate() const;
+	Status getStatus() const;
 
 private:
 	 string Info;
 	 string Title;
-	 DateTime *date;
+	 DateTime date;
 	 Status status;
 	 Store* store;
 

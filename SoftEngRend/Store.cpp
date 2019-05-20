@@ -1,8 +1,8 @@
+#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include "Store.h"
-#include "Owner.h"
-#include "stdafx.h"
+
 
 using namespace std;
 
@@ -32,24 +32,22 @@ double Store::getLat() const { return latitude; }
 double Store::getLong() const { return longitude; }
 int Store::getCapacity() const { return capacity; }
 int Store::getCapacity_Park() const { return capacity_park; }
-float Store; :getRating() const { return rating; }
+float Store::getRating() const { return rating; }
 
 
-void Store::setBio(string b) { b = bio; }
-//void Store::getName(string n) { n=name; }
+void Store::setBio(string& b) { b = bio; }
+void Store::setName(string& n) { n=name; }
 void Store::setLat(double lat) { lat = latitude; }
-void Store::setLongitude(double long) { long = longitude; }
-void Store::setCapacity(int cap) { cap = capacity; }
-void Store::setCapacity_Park(int cap_park) { cap_park = capacity_park; }
-void Store::setRating(float ra) { ra = rating; }
+void Store::setLongitude(double longi) { longitude = longi; }
+void Store::setCapacity(int cap) { capacity = cap; }
+void Store::setCapacity_Park(int cap_park) { capacity_park = cap_park; }
+void Store::setRating(float ra) { rating = ra; }
 
 void Store::updateEvent(const Events& katEvent)
 {
 	Event.push_back(katEvent);
-	for (int i = 0; i < Event.size(); i++)
-		cout << Event[i].getEvents << '\n';
 }
-const Events Store::getEvents(int e) const
+Events Store::getEvents(int e) const
 {
 
 	return Event.at(e);
@@ -64,7 +62,7 @@ void Store::setReservation(const string & katReserv)
 {
 	Reservation.push_back(katReserv);
 	for (int i = 0; i < Reservation.size(); i++)
-		cout << Reservation[i] << '\n';
+		cout << Reservation[i] << endl;
 }
 const string Store::getReservation(int r) const
 {
@@ -76,49 +74,16 @@ const string Store::getReservation(int r) const
 void Store::updateMenu(const Menu & katMenu)
 {
 	menu.push_back(katMenu);
-	for (int i = 0; i < menu.size(); i++)
-		cout << menu[i] << '\n';
-}
-void Store::deletemenu()
-{
-	menu.clear();
 }
 
-void Store::updatePhotos(const Photos & katPhoto);
+void Store::updatePhotos(const Photo & katPhoto)
 {
 	photos.push_back(katPhoto);
-	for (int i = o; i < photos.size(); i++)
-		cout << photos[i] << '\n';
 }
-const Photos Store::getPhotos(int p) const
+Photo Store::getPhotos(int p) const
 {
 	if (!photos.empty())
 		return photos.at(p);
 	else
 		std::cout << "no photos...\n";
-}
-
-
-void Store::newmenu(const Menu & katMenu)
-{
-	menu.push_back(katMenu);
-	for (int i = 0; i < Menu.size(); i++)
-		cout << Menu[i] << '\n';
-}
-void MenuComp::deleteMenu()
-{
-	Menu.clear();
-}
-
-void Store::setHours(const DateTimeStruct & katHours)
-{
-	hours.push_back(katHours);
-	for (int i = 0; i < hours.size(); i++)
-		cout << hours[i] << '\n';
-}
-void Store::getHours()
-{
-	for (auto i = hours.begin(); i != hours.end(); ++i)
-		std::cout << *i << ' ';
-	cout << '\n';
 }

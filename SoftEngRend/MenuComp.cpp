@@ -1,8 +1,8 @@
+#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <vector>
 #include "MenuComp.h"
-#include "stdafx.h"
 using namespace std;
 
 MenuComp::MenuComp( string& katTitle,  string& katInfo, float katPrice,  string& katMenu)
@@ -41,9 +41,4 @@ void MenuComp::setPrice(float katPrice)
 float MenuComp::getPrice() 
 {
 	return price;
-}
-
-void MenuComp::deleteMenu()
-{
-	Menu.clear();
 }

@@ -1,12 +1,9 @@
+#include "stdafx.h"
 #include <iostream>
 #include <string>
-#include "stdafx.h"
-//#include "Store.h"
 #include "Menu.h"
 
-
-
-Menu::Menu(const Store& ST, MenuComp& CMP)
+Menu::Menu(const Store* ST, MenuComp& CMP)
 {
 	store = ST;
 	comp.push_back(CMP);
@@ -27,5 +24,4 @@ void Menu::newMenu(MenuComp & CMP)
 {
 	deleteMenu();
 	comp.push_back(CMP);
-
 }
