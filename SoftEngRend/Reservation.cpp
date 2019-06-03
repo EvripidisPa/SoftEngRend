@@ -1,14 +1,20 @@
 #include "stdafx.h"
 #include "Reservation.h"
 #include "our_structs.h"
+enum status { Pending = 0, Accepted = 1, Completed = 2 };
 
-
-Reservation::Reservation(DateTime datetime, int numOfPeople, int numOfPark, Store store, User users)
+Reservation::Reservation(DateTime datetime, int numOfPple, int numOfPark, Store str, User users)
+	:Date_Reserv(datetime),numOfPeople(numOfPple),numOfParking(numOfPark),store(&str),user(users)
 {
 }
 
 Reservation::~Reservation()
 {
+}
+
+Reservation Reservation::getReservation()
+{
+	return *this;
 }
 
 void Reservation::updateReservation()
@@ -19,47 +25,42 @@ void Reservation::updateReservation()
 
 void Reservation::deleteReservation()
 {
-
+	delete this;
 }
 
-Date Reservation::getDateTime()
+DateTime Reservation::getDateTime()
 {
-	return Date();
+	return Date_Reserv;
 }
 
-void Reservation::setDateTime(Date DateTime)
+void Reservation::setDateTime(DateTime DTime)
 {
-	// TODO - implement Reservation::setDateTime
-	throw "Not yet implemented";
+	Date_Reserv.sec= DTime.sec;  
+	Date_Reserv.min= DTime.min;  
+	Date_Reserv.hour= DTime.hour;  
+	Date_Reserv.day= DTime.day;  
+	Date_Reserv.mon= DTime.mon;  
+	Date_Reserv.year= DTime.year;  
 }
 
-User Reservation::getUser()
+User& Reservation::getUser()
 {
-	// TODO - Check Reservation::getUser
-	// IS IT REALLY NECESSARY SINCE WE HAVE THE ID?? 2**
-	return User();
+	return *user;
 }
 
 void Reservation::setUser(User User)
 {
-	// TODO - implement Reservation::setUser
-	// IS IT REALLY NECESSARY SINCE WE HAVE THE ID?? 2**
-	throw "Not yet implemented";
+	user = &User;
 }
 
 Store Reservation::getStore()
 {
-	// TODO - check Reservation::getStore
-	// IS IT REALLY NECESSARY SINCE WE HAVE THE ID?? 2**
-	throw "Not yet implemented";
-	return Store();
+	return *store;
 }
 
 void Reservation::setStore(Store Store)
 {
-	// TODO - check Reservation::setStore
-	// IS IT REALLY NECESSARY SINCE WE HAVE THE ID?? 2**
-	throw "Not yet implemented";
+	store = &Store;
 }
 
 int Reservation::getNumOfPeople()
@@ -82,7 +83,7 @@ void Reservation::setNumOfParking(int numOfParking)
 	this->numOfParking = numOfParking;
 }
 
-void setStatus(enum status) {
-	// TODO - implement Reservation::setStatus
-	// Check Notation for enum 
-};
+void setStatus(enum status status) 
+{
+	sts = status;
+}

@@ -8,15 +8,16 @@ class Reservation
 {
 private:
 
-//	Date Date_Reserv;
+	DateTime Date_Reserv;
 	int numOfPeople;
 	int numOfParking;
 	enum status { Pending = 0, Accepted = 1, Completed = 2 };
+	enum status sts;
 	User* user;
 	Store* store;
 
 public:
-//	Reservation(DateTime datetime, int numOfPeople, int numOfPark, Store store, User users);
+	Reservation(DateTime datetime, int numOfPeople, int numOfPark, Store store, User users);
 
 	virtual ~Reservation();
 
@@ -26,11 +27,11 @@ public:
 
 	void deleteReservation();
 
-//	Date getDateTime();
+	DateTime getDateTime();
 
-//	void setDateTime(Date DateTime);
+	void setDateTime(DateTime DTime);
 
-	User getUser();
+	User& getUser();
 
 	void setUser(User User);
 
